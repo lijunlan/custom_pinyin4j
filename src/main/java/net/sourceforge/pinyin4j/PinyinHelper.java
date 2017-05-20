@@ -254,7 +254,7 @@ public class PinyinHelper {
      * representation
      */
     static public String toHanYuPinyinString(String str, HanyuPinyinOutputFormat outputFormat,
-                                             String separate) throws BadHanyuPinyinOutputFormatCombination {
+                                             String separate, boolean retain) throws BadHanyuPinyinOutputFormatCombination {
         ChineseToPinyinResource resource = ChineseToPinyinResource.getInstance();
         StringBuilder resultPinyinStrBuf = new StringBuilder();
 
@@ -284,8 +284,8 @@ public class PinyinHelper {
             } while (currentTrie != null);
 
             if (result == null) {//如果在前缀树中没有匹配到，那么它就不能转换为拼音，直接输出或者去掉
-                return toHanYuPinyinStringWithoutDic(str, outputFormat);
-//                if (retain) resultPinyinStrBuf.append(chars[i]);
+//                return toHanYuPinyinStringWithoutDic(str, outputFormat);
+                if (retain) resultPinyinStrBuf.append(chars[i]);
             } else {
                 String[] pinyinStrArray = resource.parsePinyinString(result);
                 if (pinyinStrArray != null) {
