@@ -5,6 +5,16 @@ republic from http://sourceforge.net/projects/pinyin4j
 
 optimized by junlan li
 
+mirror
+```xml
+<mirror>
+    <id>junlanli</id>
+    <name>junlanli maven</name>
+    <url>http://www.junlanli.com:8081/repository/maven-public/</url>
+    <mirrorOf>nexus</mirrorOf>
+</mirror>
+```
+
 ### Download ###
 Download the jar via maven:
 ```xml
