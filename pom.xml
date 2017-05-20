@@ -11,8 +11,8 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>focus</id>
-            <url>http://nexus.inner.focus.cn/nexus/content/repositories/snapshots/</url>
+            <id>junlan</id>
+            <url>http://www.junlanli.com:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
